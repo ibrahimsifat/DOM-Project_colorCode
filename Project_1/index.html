@@ -11,20 +11,31 @@
 
 </head>
 
-<body class="">
+<body class="root" id="root">
 
-    <div class="root text-center " id="root">
-        <h1 class="py-5">Welcome To DOM Project</h1>
-        <div class="input-group w-25 mb-3 mx-auto">
+    <h1 class="py-5 text-center">Welcome To DOM Project</h1>
+    <div class="text-center ">
+        <h4 class="text-white">Hax Color</h4>
+        <div class="input-group w-25  mx-auto">
             <span class="input-group-text">#</span>
             <input value="000000" type="text" id="output" class="form-control"
                 aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text ms-2" id="copyColorBtn">Copy</span>
         </div>
+    </div>
+
+    <div class="mt-4 text-center ">
+        <h4 class="text-white">RBG Color</h4>
+        <div class="input-group w-25 mx-auto">
+            <span class="input-group-text">#</span>
+            <input value="rgb(0,0,0)" type="text" id="output2" class="form-control"
+                aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text ms-2" id="copyColorBtn2">Copy</span>
+        </div>
         <button class="btn btn-light mt-3" id="RGBChangeBTN">Change Bg Color</button>
     </div>
 
-    </div>
+
 
 
     <script src="app.js"></script>

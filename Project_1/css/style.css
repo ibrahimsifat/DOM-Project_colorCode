@@ -84,3 +84,7 @@ h1{
     }
     
 }
+/* copy btn cursor pointer */
+.input-group-text{
+    cursor: pointer;
+}
