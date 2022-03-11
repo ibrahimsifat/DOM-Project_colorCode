@@ -32,8 +32,8 @@ const RGBGenerator = () => {
 
 // Change RGB BG color function
 RGBChangeBTN.addEventListener('click', function () {
-    const BGColor = RGBGenerator()
-    RootBG.style.backgroundColor = BGColor
+    const BGColor = RGBGenerator().substring(1)
+    RootBG.style.backgroundColor = `#${BGColor}`
     output.value = BGColor;
     div.remove();
     div = null;
@@ -44,13 +44,13 @@ RGBChangeBTN.addEventListener('click', function () {
 //copy to clipboard 
 copyColorBtn.addEventListener('click', function () {
     const outputValue = output.value
-    navigator.clipboard.writeText(outputValue)
+    navigator.clipboard.writeText(`#${output.value}`)
     if (div !== null) {
         div.remove();
         div = null;
     }
     if (isColorValid(outputValue)) {
-        const msg = `${outputValue} ___copied Successfully`
+        const msg = `#${outputValue} ___copied Successfully`
         const addClass = 'success-toast-msg'
         generateToast(msg, addClass)
 
@@ -87,9 +87,7 @@ function generateToast(text, addClass) {
 
 //check color code 
 function isColorValid(colorCode) {
-    if (colorCode < 7) return false;
-    if (colorCode[0] != '#') return false;
-    colorCode = colorCode.substring(1)
+    if (colorCode <= 5) return false;
     return /^[0-9A-Fa-f]{3}$/i.test(colorCode) || /^[0-9A-Fa-f]{6}$/i.test(colorCode)
 }
 

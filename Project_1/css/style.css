@@ -11,7 +11,9 @@
 h1{
     color: #fff;
 }
-
+.output-container{
+    width: 200px;
+}
 /* tost-massages css */
 .toset-msg{
     position: fixed;
