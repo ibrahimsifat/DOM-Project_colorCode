@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.root{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+h1{
+    color: #fff;
+}
+
+/* tost-massages css */
+.toset-msg{
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    opacity: 0.7;
+    color: #000;
+    padding: 10px 20px;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .success-toast-msg{
+    background-color: lightgreen;
+
+  }
+  .error-toast-msg{
+      background: orangered;
+  }  
+.closeBtn{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.closeBtn:hover{
+    background-color: aquamarine;
+}
+.toast-message-slide-in{
+    animation: toast-animation-in 0.5s ease-in;
+}
+.toast-message-slide-out{
+    animation: toast-animation-out 0.5s ease-in;
+}
+ .hide{
+     display: none;
+ }
+@keyframes toast-animation-in { 
+    from{
+        transform: translate(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes toast-animation-out {
+    from{
+        transform: translate(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translate(200px);
+        opacity: 0;
+    }
+    
+}
